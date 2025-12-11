@@ -1,12 +1,11 @@
-// src/models/Role.js
 const mongoose = require("mongoose");
 
 const roleSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true, unique: true }, // e.g. "admin"
-    permissions: [{ type: String, required: true }]       // e.g. "users:create"
+    name: { type: String, required: true, unique: true }, 
+    permissions: [{ type: String, required: true }]       
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.models.Role || mongoose.model("Role", roleSchema);
+module.exports = mongoose.model("Role", roleSchema);

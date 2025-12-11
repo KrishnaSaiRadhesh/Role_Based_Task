@@ -1,9 +1,8 @@
-// src/controllers/roleController.js
 const Role = require("../models/Role");
 
 const createRole = async (req, res) => {
   try {
-    const { name, permissions } = req.body; // permissions: string[]
+    const { name, permissions } = req.body; 
     const role = await Role.create({ name, permissions });
     res.status(201).json(role);
   } catch (err) {

@@ -1,10 +1,8 @@
-// src/middleware/authMiddleware.js
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
-const Role = require("../models/role");
 
 const authMiddleware = async (req, res, next) => {
-  const authHeader = req.headers.authorization; // "Bearer token"
+  const authHeader = req.headers.authorization; 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return res.status(401).json({ message: "No token provided" });
   }

@@ -1,4 +1,3 @@
-// src/controllers/authController.js
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
@@ -18,7 +17,7 @@ const register = async (req, res) => {
       name,
       email,
       password: hashed,
-      roles: [] // new user has NO roles => no permissions
+      roles: [] 
     });
 
     res.status(201).json({ message: "User registered. Wait for admin approval.", userId: user._id });

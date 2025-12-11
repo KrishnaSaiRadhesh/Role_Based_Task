@@ -1,4 +1,3 @@
-// src/middleware/permissionMiddleware.js
 const checkPermission = (requiredPermission) => {
   return (req, res, next) => {
     if (!req.user || !req.user.permissions) {

@@ -1,7 +1,7 @@
-// src/utils/seedAdmin.js
+
 const bcrypt = require("bcrypt");
-const User = require("../models/User");
-const Role = require("../models/Role");
+const User = require("../models/user");
+const Role = require("../models/role");
 
 const seedAdmin = async () => {
   const existingAdmin = await User.findOne({ email: "admin@example.com" });
